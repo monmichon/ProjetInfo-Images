@@ -14,10 +14,8 @@ class Piaf{
 	double m; //masse
 	int w,h;//dimensions piaf
 	Color* I; //Image
-	Color* fond;
-	void setpos(double X, double Y);
+	void setpos(int X, int Y);
 	void setv(double vX, double vY);
-
 public:
 	Piaf(double x,double y,double vx, double m);
 	int getw();
@@ -30,13 +28,13 @@ public:
 	void bouger();
 	void afficher();
 	void effacer();
+	void reset(int X, int Y);
 };
 
 class Obstacle{
 	int x,y, l, h,t; //x est le coin du bas, l la largeur, h la hauteur du trou dans le tube;
 	Color* I1;
 	Color* I2;
-	Color* fond;
 public:
 	Obstacle();
 	void afficher();
@@ -48,4 +46,5 @@ public:
 	void seth(double H);
 	bool cadre();
 	double getx();
+	int getl();
 };

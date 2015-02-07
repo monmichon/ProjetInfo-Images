@@ -2,7 +2,7 @@
 using namespace Imagine;
 #include "Classes.h"
 
-void Piaf::setpos(double X, double Y){
+void Piaf::setpos(int X, int Y){
 	x = X;
 	y = Y;
 }
@@ -39,9 +39,7 @@ void Piaf::bouger(){
 Piaf::Piaf(double X, double Y, double vX, double M){
 	setpos(X, Y);
 	setv(vX, 0);
-	int fondw, fondh;
 	loadColorImage(srcPath("oiseau.jpg"), I, w, h);
-	loadColorImage(srcPath("fond.jpg"), fond,fondw,fondh);
 	m = M;
 }
 void Piaf::afficher(){
@@ -51,11 +49,9 @@ void Piaf::afficher(){
 void Piaf::effacer()
 {
 	putColorImage(IntPoint2(x, y), I, w, h);
-	/*for (int i = 0; i < w; i++)
-	{
-		for (int j = 0; j < h; j++){
-			drawPoint(IntPoint2(x + i, y + j), fond[i + j*w]);
-		}
-	}*/
 }
 
+void Piaf::reset(int X, int Y){
+	setpos(X,Y);
+	setv(vx, 0);
+}
