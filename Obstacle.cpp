@@ -2,6 +2,7 @@
 using namespace Imagine;
 #include "Classes.h"
 
+
 Obstacle::Obstacle(){ //génère un obstacle hors de l'écran
 	x = 2*width;
 	h = 50;
@@ -9,6 +10,7 @@ Obstacle::Obstacle(){ //génère un obstacle hors de l'écran
 	loadColorImage(srcPath("tuyau1.jpg"), I1, l,t);
 	loadColorImage(srcPath("tuyau2.jpg"), I2, l, t);
 }
+
 void Obstacle::afficher(){
 	putColorImage(IntPoint2(x, y-t), I1,l,t);
 	putColorImage(IntPoint2(x, y+h), I2, l, t);
@@ -24,7 +26,7 @@ void Obstacle::bouger(double vx){
 bool Obstacle::test(Piaf p){
 	int W = p.getw();
 	int H = p.geth();
-	return((p.getx()< (x + l)) && (p.getx() > x-W)&& (p.gety()<y || p.gety()>y+h-H)); //si p est dans l'obstacle, on retourne true
+	return((p.getx()< (x + l-5)) && (p.getx() > x-W+5)&& (p.gety()<y-5 || p.gety()>y+h-H+5)); //si p est dans l'obstacle, on retourne true
 }
 
 void Obstacle::setx(double X){

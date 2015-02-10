@@ -5,15 +5,24 @@ const double dt = 0.05; //pas temporel
 const double g = 98*dt;//pesanteur
 const double vo = -500*dt; //vitesse obstacle;
 const double lim = 140;//vitesse limite de l'oiseau
-const int width = 600, height = 800;
 const int N = 10;
+const int width = 600, height = 800;
 
 class Piaf{
 	double x, y;//position
 	double vx,vy;//vitesse
 	double m; //masse
 	int w,h;//dimensions piaf
-	Color* I; //Image
+	Color* I0;
+	Color* I1;
+	Color* I2;
+	Color* I3;
+	Color* I4;
+	Color* I5;
+	Color* I6;
+
+	int pos;
+
 	void setpos(int X, int Y);
 	void setv(double vX, double vY);
 public:
@@ -47,4 +56,18 @@ public:
 	bool cadre();
 	double getx();
 	int getl();
+};
+
+class Bouton{
+	int x, y, w, h,t;
+	Color c1, c2;
+	std::string s;
+public:
+	Bouton(std::string s, int x, int y, int w, int h, Color c1, Color c2,int t);
+	void afficher();
+	void text();
+	void setw(int W);
+	void setText(std::string S);
+	void clic();
+	bool test();
 };
