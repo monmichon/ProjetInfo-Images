@@ -7,9 +7,9 @@ using namespace Imagine;
 #include <Imagine/Common.h>
 
 bool Clavier() {
-	Event e;
-	getEvent(0.5, e);
-	return(e.type == EVT_KEY_ON);
+    Event e;
+    getEvent(0.5, e);
+    return(e.type == EVT_KEY_ON);
 }
 
 bool Clavier2() {
@@ -20,4 +20,8 @@ bool Clavier2() {
 			return true;
 	} while (e.type != EVT_NONE);
 	return false;
+}
+
+void invGrav(int m){
+	m = -m;
 }
