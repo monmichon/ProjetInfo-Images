@@ -161,7 +161,6 @@ int main()
 			}
 		}
 
-<<<<<<< HEAD
 
 		fillRect(IntPoint2(0, 0), width2, height2, RED);
 		milliSleep(100);
@@ -172,8 +171,7 @@ int main()
 		fillRect(IntPoint2(0, 0), width2, height2, YELLOW);
 		milliSleep(100);
         
-=======
->>>>>>> FETCH_HEAD
+
 		but = false;
 		bouton.setText("REJOUER");
 		bouton.setw(width2 / 2+45);

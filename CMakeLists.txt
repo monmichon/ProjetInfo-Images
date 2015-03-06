@@ -5,10 +5,5 @@ IF(NOT EXISTS "${d}")
 ENDIF(NOT EXISTS "${d}")
 SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${d}/CMake")
 FIND_PACKAGE(Imagine)
-
-<<<<<<< HEAD
-ImagineAddExecutable(Projet main.cpp Obstacle.cpp Piaf.cpp Fonctions.cpp Bouton.cpp Classes.h Fonctions.h)
-=======
 ImagineAddExecutable(Projet main.cpp Obstacle.cpp Piaf.cpp Fonctions.cpp Bouton.cpp Piece.cpp Classes.h Fonctions.h)
->>>>>>> FETCH_HEAD
 ImagineUseModules(Projet Images)
