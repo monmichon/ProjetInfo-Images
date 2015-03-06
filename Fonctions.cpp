@@ -21,3 +21,7 @@ bool Clavier2() {
 	} while (e.type != EVT_NONE);
 	return false;
 }
+
+void invGrav(int m){
+	m = -m;
+}

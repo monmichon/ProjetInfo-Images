@@ -61,13 +61,30 @@ public:
 class Bouton{
 	int x, y, w, h,t;
 	Color c1, c2;
-	std::string s;
+	std::string s1, s2; //si texte à afficher
+	Color* I1;//si image à afficher
+	Color* I2;
+	bool b; //indique si bouton image ou texte
 public:
-	Bouton(std::string s, int x, int y, int w, int h, Color c1, Color c2,int t);
+	Bouton(std::string s, int x, int y, int w, int h, Color c1, Color c2, int t);
+	Bouton(std::string s1, std::string s2, int x, int y);
 	void afficher();
 	void text();
 	void setw(int W);
 	void setText(std::string S);
 	void clic();
 	bool test();
+};
+
+class Piece{
+	int x, y, w, h, type;
+	Color* I;
+public:
+	Piece(int x, int y, int type);
+	~Piece();
+	void bouger(int vx);
+	void afficher();
+	bool test(Piaf p);
+	void setxy(int X, int Y);
+	bool cadre();
 };

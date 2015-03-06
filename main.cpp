@@ -19,12 +19,13 @@ int main()
 	srand(time(NULL));
 
 	Piaf p(x0, height/2, 0, m);  //crée un piaf (cercle de rayon r, de masse m, placé en (x0,height/2) etde couleur rouge)
+	Piece piece(3*width / 4, height / 2, 1);
 	Obstacle obs[N]; //liste de tout les obstacles
 
 	int n = 0; //n est le nombre d'obstacles créés
 	int compteur = 0;
 	double u = 0, v = 0, h = 0; //u, v, h variables aléatoires pour génération obstacles, grav variable aléatoire pour changement gravité
-	bool b = false, c = false, booleen = false, but = false; //booleens utiles pour la suite (mémoire)
+	bool b = false, c = false, booleen = false, but = false, bool_piece=false; //booleens utiles pour la suite (mémoire)
 	Timer t;
 
 	Color* fond;
@@ -32,7 +33,7 @@ int main()
 	openWindow(width2,height2, "FlaPonts Bird");
 
 	
-	putColorImage(IntPoint2(0, 0), fond, width2, height2); //affichage du fond  
+	putColorImage(IntPoint2(-1, -1), fond, width2, height2); //affichage du fond  
 
 	p.afficher();
 
@@ -40,13 +41,11 @@ int main()
 	int best;
 	score.close();
 
-	Bouton bouton("START", width2 / 4 + 10, height2 / 3, 240,70,RED,YELLOW,50);
+	Bouton bouton("START", width2 / 4 + 10, height2 / 3, 240, 70, Color(255, 100, 0), YELLOW, 50);
 
 	bouton.afficher();
 	while (!but)
-	{
 		but = bouton.test();
-	}
 	bouton.clic();
 	milliSleep(50);
 
@@ -71,11 +70,18 @@ int main()
 				obs[n - 1].sety(double(rand()) / RAND_MAX*(height2 - 200));
 				u = double(rand()) / RAND_MAX;
 				v = double(rand()) / RAND_MAX;
-				h = 135 + 15 * sqrt(-2 * log(u))*cos(2 * M_PI*v);//loi gaussienne pour l'epaisseur (pour éviter qu'il y ait trop de trucs large, mais un peu quand même
+				h = 140 + 15 * sqrt(-2 * log(u))*cos(2 * M_PI*v);//loi gaussienne pour l'epaisseur (pour éviter qu'il y ait trop de trucs large, mais un peu quand même
 				if (h < 120)
 					obs[n - 1].seth(120); 
 				else
 					obs[n - 1].seth(h);
+
+				u = rand() % 4; //lorsqu'on crée un obstacle, il y a une chance sur 3 de créer une pièce située à une hauteur aléatoire
+				if (u == 0){
+					bool_piece = true;
+					u = double(rand()) / RAND_MAX;
+					piece.setxy(3 * width / 4, 10 + (height - 100)*v);
+				}
 			}
 
 
@@ -91,9 +97,16 @@ int main()
 					p.saut(jump - p.getvy());
 			}
 
+			cout << bool_piece << endl;
+			if (bool_piece)
+			{//si il y a une pièce on la décale et on l'affiche
+				piece.bouger(-vx);
+				piece.afficher();
+			}
+
+
 			p.bouger();
 			p.afficher();
-
 
 			if (!obs[0].cadre())
 			{//si l'obstacle sort de la fenêtre, on le sort de la liste et on décale tout
@@ -106,8 +119,10 @@ int main()
 			if ((obs[0].getx() + obs[0].getl() < x0) && !booleen)
 			{ //si on passse un obstacle (forcément le premier de la liste) alors on incrémente le compteur
 				compteur++;
+				compteur = (m < 0) ? (compteur + 1) : compteur; //si gravité négative, points compte doubles
 				booleen = true; //le booléen est là pour dire que l'obstacle à gauche du piaf a déjà été compté
 			}
+
 
 			for (int i = 0; i < n; i++)
 			{
@@ -115,6 +130,16 @@ int main()
 				if (obs[i].cadre()) //on affiche l'obstacle i  si il est dans la fenêtre
 					obs[i].afficher();
 			}
+
+
+			if (piece.test(p) && bool_piece)
+			{ //si on passe sur une pièce, on la fait disparaître, et on donne un point au joueur
+				bool_piece = false;
+				compteur++;
+			}
+			if (!piece.cadre())
+				bool_piece = false;
+
 
 			drawString(5, 60, to_string(compteur), Color(255, 100, 0), 45, 0, false, true);
 			drawString(12, 60 + 50, to_string(best), Color(255, 100, 0), 30, 0, false, true);
@@ -136,16 +161,6 @@ int main()
 			}
 		}
 
-
-		fillRect(IntPoint2(0, 0), width2, height2, RED);
-		milliSleep(100);
-		fillRect(IntPoint2(0, 0), width2, height2, YELLOW);
-		milliSleep(100);
-		fillRect(IntPoint2(0, 0), width2, height2, RED);
-		milliSleep(100);
-		fillRect(IntPoint2(0, 0), width2, height2, YELLOW);
-		milliSleep(100);
-
 		but = false;
 		bouton.setText("REJOUER");
 		bouton.setw(width2 / 2+45);
@@ -165,7 +180,7 @@ int main()
 			obs[i] = obs[i + 1];
 		n--;
 		booleen = false;
-		milliSleep(50);
+		bool_piece = false;
 
 	}//fin boucle jeu
 	Imagine::endGraphics();
