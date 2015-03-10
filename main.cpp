@@ -8,61 +8,64 @@ using namespace std;
 #include "Fonctions.h"
 
 
-double m = 35, x0 = width / 3;
+int m = 35, x0 = width / 3;
 const double  r = 13, jump = 190*m*dt, pas_vitesse =dt;
-double vx = 1400 * dt;
-int width2 = width, height2 = height;
+int vx = 1400 * dt; //vitesse de défilement des tuyaux
+int width2 = width, height2 = height; //width et height sont des const définis dans Classes.h, et on a besoin de leurs équivalents en int pour les utiliser dans loadColorImage
+int n = 0; //n est le nombre d'obstacles créés
+int compteur = 0;
+double u = 0, v = 0, h = 0; //u, v, h variables aléatoires pour génération obstacles, grav variable aléatoire pour changement gravité
+bool b = false, c = false, booleen = false, but = false, quitter = false;//booleens utiles pour la suite (mémoire)
 
+int X, Y; //Positions de la souris pour clics quand plusieurs boutons
 
 int main()
 {
 	srand(time(NULL));
 
-	Piaf p(x0, height/2, 0, m);  //crée un piaf (cercle de rayon r, de masse m, placé en (x0,height/2) etde couleur rouge)
-	Piece piece(3*width / 4, height / 2, 1);
-	Obstacle obs[N]; //liste de tout les obstacles
+	Piaf p(x0, height/2, 0, m);				 //crée un piaf (cercle de rayon r, de masse m, placé en (x0,height/2) etde couleur rouge)
+	Piece piece(3*width / 4, height / 2, 1); //Création d'une piece pour bonus
+	Obstacle obs[N];						 //liste de tout les obstacles
 
-	int n = 0; //n est le nombre d'obstacles créés
-	int compteur = 0;
-	double u = 0, v = 0, h = 0; //u, v, h variables aléatoires pour génération obstacles, grav variable aléatoire pour changement gravité
-	bool b = false, c = false, booleen = false, but = false, bool_piece=false; //booleens utiles pour la suite (mémoire)
-	Timer t;
+	Timer t; //Définition d'un chrono pour contrôler temps d'éxécution de chaque boucle
 
-	Color* fond;
-	loadColorImage(srcPath("fond.jpg"), fond, width2, height2);
-	openWindow(width2,height2, "FlaPonts Bird");
+	Color* fond;													//CHARGEMENT DU
+	loadColorImage(srcPath("fond.jpg"), fond, width2, height2);     //FOND ET
+	openWindow(width2,height2, "FlaPonts Bird");				    //OUVERTURE FENETRE
 
 	
-	putColorImage(IntPoint2(-1, -1), fond, width2, height2); //affichage du fond  
+	putColorImage(IntPoint2(-1, -1), fond, width2, height2); //affichage du fond  //AFFICHAGE DE L'ECRAN
+	p.afficher();//affichage de l'oiseau	                                      //D'OUVERTURE
 
-	p.afficher();
+	ifstream score(srcPath("savegame.txt"));  //ON OUVRE UN FICHIER
+	int best;                                 //POUR SAUVEGARDER
+	score.close();                            //LES MEILLEURS SCORES
 
-	ifstream score(srcPath("savegame.txt"));
-	int best;
-	score.close();
+	Bouton bouton_start("bouton_start.jpg", "bouton_start_clic.jpg",width2 / 5-20, height2 / 3);				//DEFINITION
+	Bouton bouton_rejouer("bouton_rejouer.jpg", "bouton_rejouer_clic.jpg", width2 / 5 - 20, height2 / 5+50);       //DES BOUTONS
+	Bouton bouton_quitter("bouton_quitter.jpg", "bouton_quitter_clic.jpg", width2 / 5 - 20, height2/5+300);        //UTILES
 
-	Bouton bouton("START", width2 / 4 + 10, height2 / 3, 240, 70, Color(255, 100, 0), YELLOW, 50);
+	bouton_start.afficher();        //
+	while (!but)                    //
+		but = bouton_start.test();  //GESTION BOUTON START
+	bouton_start.clic();            //
+	milliSleep(50);                 //
 
-	bouton.afficher();
-	while (!but)
-		but = bouton.test();
-	bouton.clic();
-	milliSleep(50);
+	t.reset(); //On lance le chrono
 
-	t.reset();
-
-	while (true) 
+	do  //On entre dans la boucle d'éxécution (en sortir signifie quitter le jeu, voir while à la fin)
 	{
-		while (!b && !c)
-		{ //tant que l'oiseau ne s'est ni crashé dans un tuyau (b vrai) ni dans une paroi (c vrai)
+		while (!b && !c) //Tant que l'oiseau ne s'est ni crashé dans un tuyau(b vrai) ni dans une paroi(c vrai)
+		{
 
-			ifstream score(srcPath("savegame.txt")); //on met à jour le meilleur score
-			score >> best;
-			score.close();
+			t.reset();//Remise à zero du chrono
 
-			t.reset(); //on remet le chrono à 0
+			ifstream score(srcPath("savegame.txt")); //MISE A 
+			score >> best;							 //JOUR 
+			score.close();							 //MEILLEUR SCORE
 
 
+			///////CREATION OBSTACLES ET PIECES
 			if (n == 0 || obs[n - 1].getx() < width2 - 600) //on crée un obstacle si le dernier est suffisament avancé (dans le tiers gauche). Le rand() sert à ne pas avoir une distnce constante entre deux obstacles
 			{
 				n++;
@@ -70,25 +73,27 @@ int main()
 				obs[n - 1].sety(double(rand()) / RAND_MAX*(height2 - 200));
 				u = double(rand()) / RAND_MAX;
 				v = double(rand()) / RAND_MAX;
-				h = 140 + 15 * sqrt(-2 * log(u))*cos(2 * M_PI*v);//loi gaussienne pour l'epaisseur (pour éviter qu'il y ait trop de trucs large, mais un peu quand même
+				h = 145+15 * sqrt(-2 * log(u))*cos(2 * M_PI*v);//loi gaussienne pour l'epaisseur (pour éviter qu'il y ait trop de trucs large, mais un peu quand même
 				if (h < 120)
 					obs[n - 1].seth(120); 
 				else
 					obs[n - 1].seth(h);
 
-				u = rand() % 4; //lorsqu'on crée un obstacle, il y a une chance sur 3 de créer une pièce située à une hauteur aléatoire
+				u = rand() % 5 ; //lorsqu'on crée un obstacle, il y a une chance sur 3 de créer une pièce située à une hauteur aléatoire
 				if (u == 0){
-					bool_piece = true;
+					piece.existence(true);
 					u = double(rand()) / RAND_MAX;
-					piece.setxy(3 * width / 4, 10 + (height - 100)*v);
+					piece.setxy(obs[n-1].getx()+300, 30 + (height - 150)*u);
 				}
 			}
+			//////////////
 
 
 			noRefreshBegin();////////////////////////////////////////////////////// PARTIE AFFICHAGE
 
-			putColorImage(IntPoint2(0, 0), fond, width2, height2);
+			putColorImage(IntPoint2(0, 0), fond, width2, height2); //On affiche le fond, ce qui efface tout l'écran précédent
 
+			///////DETECTION CLAVIER
 			if (Clavier())
 			{
 				if (p.getvy() > 0)
@@ -96,33 +101,32 @@ int main()
 				else
 					p.saut(jump - p.getvy());
 			}
+			//////
 
-			cout << bool_piece << endl;
-			if (bool_piece)
-			{//si il y a une pièce on la décale et on l'affiche
+			////////////GESTION MOUVEMENT DE L'ENSEMBLE DES OBJETS
+
+			if (piece.existe() && piece.cadre())    //PIECE (si il y en a une)
+			{
 				piece.bouger(-vx);
 				piece.afficher();
 			}
 
+			p.bouger();  //MOUVEMENT
+			p.afficher();//OISEAU
 
-			p.bouger();
-			p.afficher();
-
-			if (!obs[0].cadre())
-			{//si l'obstacle sort de la fenêtre, on le sort de la liste et on décale tout
+			if (!obs[0].cadre()) //si l'obstacle sort de la fenêtre, on le sort de la liste et on décale tout
+			{
 				for (int i = 0; i < n; i++)
 					obs[i] = obs[i + 1];
 				n--;
 				booleen = false;
 			}
 
-			if ((obs[0].getx() + obs[0].getl() < x0) && !booleen)
-			{ //si on passse un obstacle (forcément le premier de la liste) alors on incrémente le compteur
+			if ((obs[0].getx() + obs[0].getl() < x0) && !booleen)//si on passe un obstacle (forcément le premier de la liste) alors on incrémente le compteur
+			{ 
 				compteur++;
-				compteur = (m < 0) ? (compteur + 1) : compteur; //si gravité négative, points compte doubles
-				booleen = true; //le booléen est là pour dire que l'obstacle à gauche du piaf a déjà été compté
+				booleen = true; //le booléen est là pour dire que l'obstacle à gauche de l'oiseau a déjà été compté
 			}
-
 
 			for (int i = 0; i < n; i++)
 			{
@@ -130,71 +134,69 @@ int main()
 				if (obs[i].cadre()) //on affiche l'obstacle i  si il est dans la fenêtre
 					obs[i].afficher();
 			}
+			////////////////////////
 
 
-			if (piece.test(p) && bool_piece)
+			drawString(5, 60, to_string(compteur), Color(255, 100, 0), 45, 0, false, true);   //AFFICHAGE SCORE
+			drawString(12, 60 + 50, to_string(best), Color(255, 100, 0), 30, 0, false, true); //ET MEILLEUR SCORE
+
+			noRefreshEnd();
+			///////////////////FIN PARTIE AFFICHAGE
+
+
+			/////DETECTION COLLISIONS
+			c = !((p.gety() > 0) && (p.gety() < height2 - p.geth())); //vrai si l'oiseau est hors cadre 
+
+			b = obs[0].test(p); //Un seul obstacle dans l'écran (dans le format actuel)
+
+			if (piece.test(p) && piece.existe())
 			{ //si on passe sur une pièce, on la fait disparaître, et on donne un point au joueur
-				bool_piece = false;
+				piece.existence(false);
 				compteur++;
 			}
-			if (!piece.cadre())
-				bool_piece = false;
+			///////////
 
-
-			drawString(5, 60, to_string(compteur), Color(255, 100, 0), 45, 0, false, true);
-			drawString(12, 60 + 50, to_string(best), Color(255, 100, 0), 30, 0, false, true);
-			noRefreshEnd();////////////////////////////////////////FIN PARTIE AFFICHAGE
-
-			c = !((p.gety() > 0) && (p.gety() < height2 - p.geth()));
-			for (int i = 0; i < 3; i++) //Jamais plus de trois obstacles passés par p et toujours dans l'écran, pas besoin de tout tester
-				b = b || obs[i].test(p);
 
 			if (300 * dt - 1000 * t.lap()>0)  //pour éviter que ça freeze si la boucle met trop de temps à s'executer
 				milliSleep(300 * dt - 1000 * t.lap()); //on essaie d'être le plus régulier possible
 
 
-			if (compteur > best)
-			{ //on modifie le meilleur score en temps réel
-				ofstream score(srcPath("savegame.txt"));
-				score << compteur;
-				score.close();
+			if (compteur > best) //Si on bat le meilleur score, on le met constamment à jour
+			{
+				ofstream score(srcPath("savegame.txt")); //ECRITURE
+				score << compteur;						 //MEILLEUR SCORE
+				score.close();                           //DANS FICHIER TXT
 			}
-		}
-
-
-		fillRect(IntPoint2(0, 0), width2, height2, RED);
-		milliSleep(100);
-		fillRect(IntPoint2(0, 0), width2, height2, YELLOW);
-		milliSleep(100);
-		fillRect(IntPoint2(0, 0), width2, height2, RED);
-		milliSleep(100);
-		fillRect(IntPoint2(0, 0), width2, height2, YELLOW);
-		milliSleep(100);
-        
+		}     
 
 		but = false;
-		bouton.setText("REJOUER");
-		bouton.setw(width2 / 2+45);
-		bouton.afficher();
 
-		while (!but)
+		bouton_rejouer.afficher();	   
+		bouton_quitter.afficher();										 //  		                         
+		while (!but)						                             // GESTION
+		{                                                                //
+			getMouse(X, Y);					                             // BOUTONS
+			but = bouton_rejouer.test(X,Y)||bouton_quitter.test(X,Y);    // REJOUER
+		}								                                 // ET QUITTER
+		if (bouton_rejouer.test(X, Y))
 		{
-			but = bouton.test();
+			bouton_rejouer.clic();
+			compteur = 0;//on réinitialise tout pour rejouer
+			p.reset(x0, height2 / 2);
+			b = false;
+			c = false;
+			for (int i = 0; i < n; i++)
+				obs[i] = obs[i + 1];
+			n--;
+			booleen = false;
+			piece.existence(false);
 		}
-
-		bouton.clic();
-		compteur = 0;
-		p.reset(x0, height2 / 2);
-		b = false;
-		c = false;
-		for (int i = 0; i < n; i++)
-			obs[i] = obs[i + 1];
-		n--;
-		booleen = false;
-		bool_piece = false;
-
-	}//fin boucle jeu
-	Imagine::endGraphics();
+		else
+		{
+			bouton_quitter.clic();
+			quitter = true;
+		}
+	}while (!quitter);  //fin boucle jeu
 	return 0;
 }
 

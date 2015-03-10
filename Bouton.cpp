@@ -16,6 +16,7 @@ Bouton::Bouton(string S, int X, int Y, int W, int H, Color C1, Color C2,int T){
 	c2 = C2;
 	t = T;
 	b = false;
+	
 }
 Bouton::Bouton(std::string s1, std::string s2, int X, int Y)
 {
@@ -24,6 +25,11 @@ Bouton::Bouton(std::string s1, std::string s2, int X, int Y)
 	x = X;
 	y = Y;
 	b = true;
+}
+
+Bouton::~Bouton(){
+	delete[] I1;
+	delete[] I2;
 }
 
 void Bouton::afficher(){
@@ -35,14 +41,28 @@ void Bouton::afficher(){
 
 void Bouton::clic(){
 	afficher();
-	drawString(IntPoint2(x, y), s1, c2, t);
-	milliSleep(150);
-	drawString(IntPoint2(x, y), s1, c1, t);
+	if (!b){
+		drawString(IntPoint2(x, y), s1, c2, t);
+		milliSleep(150);
+		drawString(IntPoint2(x, y), s1, c1, t);
+		milliSleep(30);
+	}
+	else
+	{
+		putColorImage(IntPoint2(x, y), I2, w, h);
+		milliSleep(150);
+		putColorImage(IntPoint2(x, y), I1, w, h);
+		milliSleep(30);
+	}
 }
 bool Bouton::test(){
 	int X=0, Y=0;
 	getMouse(X, Y);
-	return(X > x && X<x + w && Y>y-h && Y<y);
+	return(X > x && X<x + w && Y>y && Y<y+h);
+}
+
+bool Bouton::test(int X, int Y){
+	return(X > x && X<x + w && Y>y && Y<y + h);
 }
 
 void Bouton::setw(int W){
@@ -52,4 +72,9 @@ void Bouton::setw(int W){
 
 void Bouton::setText(std::string S){
 	s1 = S;
+}
+
+void Bouton::setImage(std::string S1, std::string S2){
+	loadColorImage(stringSrcPath(S1), I1, w, h);
+	loadColorImage(stringSrcPath(S2), I2, w, h);
 }

@@ -11,17 +11,3 @@ bool Clavier() {
     getEvent(0.5, e);
     return(e.type == EVT_KEY_ON);
 }
-
-bool Clavier2() {
-	Event e;
-	do {
-		getEvent(2, e);
-		if (e.type == EVT_KEY_ON)
-			return true;
-	} while (e.type != EVT_NONE);
-	return false;
-}
-
-void invGrav(int m){
-	m = -m;
-}

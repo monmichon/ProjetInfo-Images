@@ -7,5 +7,3 @@ using namespace Imagine;
 
 
 bool Clavier();
-
-void invGrav();

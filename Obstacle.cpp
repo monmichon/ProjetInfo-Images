@@ -15,10 +15,7 @@ void Obstacle::afficher(){
 	putColorImage(IntPoint2(x, y-t), I1,l,t);
 	putColorImage(IntPoint2(x, y+h), I2, l, t);
 }
-void Obstacle:: effacer(){
-	putColorImage(IntPoint2(x, y - t), I1, l, t);
-	putColorImage(IntPoint2(x, y + h), I2, l, t);
-}
+
 void Obstacle::bouger(double vx){
 	x += vx*dt;
 }

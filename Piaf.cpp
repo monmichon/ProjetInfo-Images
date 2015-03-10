@@ -6,8 +6,7 @@ void Piaf::setpos(int X, int Y){
 	x = X;
 	y = Y;
 }
-void Piaf::setv(double vX, double vY){
-	vx = vX;
+void Piaf::setv(double vY){
 	vy = vY;
 }
 int Piaf::getw(){
@@ -22,9 +21,7 @@ double Piaf::getx(){
 double Piaf::gety(){
 	return y;
 }
-double Piaf::getvx(){
-	return vx;
-}
+
 double Piaf::getvy(){
 	return vy;
 }
@@ -33,7 +30,6 @@ void Piaf::saut(double dy){
 }
 void Piaf::bouger(){
 	vy =(abs(vy)>lim)?vy/(abs(vy))*lim:(vy+ m*g*dt);
-	x += vx*dt;
 	y += vy*dt;
 	if (vy < -lim/2)
 		pos = 0;
@@ -53,7 +49,7 @@ void Piaf::bouger(){
 
 Piaf::Piaf(double X, double Y, double vX, double M){
 	setpos(X, Y);
-	setv(vX, 0);
+	setv(0);
 	loadColorImage(srcPath("Oiseau0.jpg"), I0, w, h);
 	loadColorImage(srcPath("Oiseau1.jpg"), I1, w, h);
 	loadColorImage(srcPath("Oiseau2.jpg"), I2, w, h);
@@ -81,12 +77,7 @@ void Piaf::afficher(){
 		putColorImage(IntPoint2(x, y), I6, w, h);
 }
 
-void Piaf::effacer()
-{
-	putColorImage(IntPoint2(x, y), I1, w, h);
-}
-
 void Piaf::reset(int X, int Y){
 	setpos(X,Y);
-	setv(vx, 0);
+	setv(0);
 }

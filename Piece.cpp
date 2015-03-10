@@ -12,6 +12,7 @@ Piece::Piece(int X, int Y, int TYPE){
 	y = Y;
 	type = TYPE;
 	loadColorImage(srcPath("Piece.jpg"), I, w, h);
+	b = false;
 }
 
 Piece::~Piece(){
@@ -30,7 +31,7 @@ bool Piece::test(Piaf p){
 	int W = p.getw();
 	int H = p.geth();
 	IntPoint2 p_centre(p.getx() + W / 2, p.gety() + H / 2);
-	return(p_centre.x()>x-5 && p_centre.x()<x+w+5 && p_centre.y()>y-5 && p_centre.y()<y+h+5);
+	return((p_centre.x()>x-5) && (p_centre.x()<x+w+5) && (p_centre.y()>y-5) && (p_centre.y()<y+h+5));
 }
 
 void Piece::setxy(int X, int Y){
@@ -41,5 +42,14 @@ void Piece::setxy(int X, int Y){
 bool Piece::cadre(){
 		if ((x + w) < 0)
 			return false;
-		else return true;
+		else 
+			return true;
+}
+
+bool Piece::existe(){
+	return b;
+}
+
+void Piece::existence(bool booleen){
+	b = booleen;
 }
