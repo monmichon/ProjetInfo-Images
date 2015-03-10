@@ -22,11 +22,11 @@ class Piaf{
 	Color* I6;
 
 	int pos;//repère pour savoir quelle image afficher parmi les 7
-
+    int perso; // choix du personnage
 	void setpos(int X, int Y);
 	void setv(double vY);
 public:
-	Piaf(double x,double y,double vx, double m);
+	Piaf(double x,double y,double vx, double m, int perso);
 	int getw();
 	int geth();
 	double getx();

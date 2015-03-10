@@ -18,13 +18,12 @@ double u = 0, v = 0, h = 0; //u, v, h variables aléatoires pour génération obsta
 bool b = false, c = false, booleen = false, but = false, quitter = false;//booleens utiles pour la suite (mémoire)
 
 int X, Y; //Positions de la souris pour clics quand plusieurs boutons
-
+int perso; // permet de choisir le personnage au dŽbut du jeu
 int main()
 {
 	srand(time(NULL));
 
-	Piaf p(x0, height/2, 0, m);				 //crée un piaf (cercle de rayon r, de masse m, placé en (x0,height/2) etde couleur rouge)
-	Piece piece(3*width / 4, height / 2, 1); //Création d'une piece pour bonus
+    Piece piece(3*width / 4, height / 2, 1); //Création d'une piece pour bonus
 	Obstacle obs[N];						 //liste de tout les obstacles
 
 	Timer t; //Définition d'un chrono pour contrôler temps d'éxécution de chaque boucle
@@ -34,18 +33,56 @@ int main()
 	openWindow(width2,height2, "FlaPonts Bird");				    //OUVERTURE FENETRE
 
 	
-	putColorImage(IntPoint2(-1, -1), fond, width2, height2); //affichage du fond  //AFFICHAGE DE L'ECRAN
-	p.afficher();//affichage de l'oiseau	                                      //D'OUVERTURE
+	putColorImage(IntPoint2(-1, -1), fond, width2, height2);//affichage du fond  //AFFICHAGE DE L'ECRAN
+    
+    
+    
+    
+    
 
 	ifstream score(srcPath("savegame.txt"));  //ON OUVRE UN FICHIER
 	int best;                                 //POUR SAUVEGARDER
 	score.close();                            //LES MEILLEURS SCORES
 
-	Bouton bouton_start("bouton_start.jpg", "bouton_start_clic.jpg",width2 / 5-20, height2 / 3);				//DEFINITION
+	Bouton bouton_start("bouton_start.jpg", "bouton_start_clic.jpg",width2 / 5-20, height2 / 3);			    	//DEFINITION
 	Bouton bouton_rejouer("bouton_rejouer.jpg", "bouton_rejouer_clic.jpg", width2 / 5 - 20, height2 / 5+50);       //DES BOUTONS
 	Bouton bouton_quitter("bouton_quitter.jpg", "bouton_quitter_clic.jpg", width2 / 5 - 20, height2/5+300);        //UTILES
-
-	bouton_start.afficher();        //
+    Bouton bouton_flappy("oiseau2.jpg","oiseau2.jpg",width2 / 2, height2 / 3);
+    Bouton bouton_mathias("m.jpg","m_clic.jpg",width2 / 2+180, height2 / 3);
+    Bouton bouton_thibaud("t.jpg","t_clic.jpg",width2 / 2-180, height2 / 3);
+    
+    drawString(width2/2-180,height2/3-100,"choisissez",YELLOW,50);
+    drawString(width2/2-180,height2/3-10,"votre",YELLOW,50);
+    drawString(width2/2-180,height2/3+30,"personnage",YELLOW,50);
+    bouton_flappy.afficher();
+    bouton_mathias.afficher();
+    bouton_thibaud.afficher();
+    
+    while (!but)
+    {
+        getMouse(X, Y);
+        but =( bouton_mathias.test(X,Y)||bouton_thibaud.test(X,Y)||bouton_flappy.test(X,Y));
+    }
+    if(bouton_mathias.test(X,Y))
+    {
+        bouton_mathias.clic();
+        perso=1;
+    }
+    else if(bouton_thibaud.test(X,Y)){
+        bouton_thibaud.clic();
+        perso=2;
+    }
+    else{
+        bouton_flappy.clic();
+        perso=0;
+    }
+    but=false;
+    
+    putColorImage(IntPoint2(-1, -1), fond, width2, height2);        //affichage du fond         //AFFICHAGE DE L'ECRAN
+    Piaf p(x0, height/2, 0, m, perso);                                                          //
+    p.afficher();                                                   //affichage de l'oiseau
+    
+    bouton_start.afficher();        //
 	while (!but)                    //
 		but = bouton_start.test();  //GESTION BOUTON START
 	bouton_start.clic();            //
@@ -53,12 +90,16 @@ int main()
 
 	t.reset(); //On lance le chrono
 
+    
+                                         //D'OUVERTURE
+    
+
 	do  //On entre dans la boucle d'éxécution (en sortir signifie quitter le jeu, voir while à la fin)
 	{
 		while (!b && !c) //Tant que l'oiseau ne s'est ni crashé dans un tuyau(b vrai) ni dans une paroi(c vrai)
 		{
 
-			t.reset();//Remise à zero du chrono
+			t.reset();  //Remise à zero du chrono
 
 			ifstream score(srcPath("savegame.txt")); //MISE A 
 			score >> best;							 //JOUR 

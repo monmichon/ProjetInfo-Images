@@ -47,16 +47,36 @@ void Piaf::bouger(){
 		pos = 6;
 }
 
-Piaf::Piaf(double X, double Y, double vX, double M){
+Piaf::Piaf(double X, double Y, double vX, double M, int perso){
 	setpos(X, Y);
-	setv(0);
-	loadColorImage(srcPath("Oiseau0.jpg"), I0, w, h);
-	loadColorImage(srcPath("Oiseau1.jpg"), I1, w, h);
-	loadColorImage(srcPath("Oiseau2.jpg"), I2, w, h);
-	loadColorImage(srcPath("Oiseau3.jpg"), I3, w, h);
-	loadColorImage(srcPath("Oiseau4.jpg"), I4, w, h);
-	loadColorImage(srcPath("Oiseau5.jpg"), I5, w, h);
-	loadColorImage(srcPath("Oiseau6.jpg"), I6, w, h);
+    setv(0);
+    if(perso==0){
+        loadColorImage(srcPath("Oiseau0.jpg"), I0, w, h);
+        loadColorImage(srcPath("Oiseau1.jpg"), I1, w, h);
+        loadColorImage(srcPath("Oiseau2.jpg"), I2, w, h);
+        loadColorImage(srcPath("Oiseau3.jpg"), I3, w, h);
+        loadColorImage(srcPath("Oiseau4.jpg"), I4, w, h);
+        loadColorImage(srcPath("Oiseau5.jpg"), I5, w, h);
+        loadColorImage(srcPath("Oiseau6.jpg"), I6, w, h);
+    }
+    else if(perso==1){
+        loadColorImage(srcPath("m.jpg"), I0, w, h);
+        loadColorImage(srcPath("m.jpg"), I1, w, h);
+        loadColorImage(srcPath("m.jpg"), I2, w, h);
+        loadColorImage(srcPath("m.jpg"), I3, w, h);
+        loadColorImage(srcPath("m.jpg"), I4, w, h);
+        loadColorImage(srcPath("m.jpg"), I5, w, h);
+        loadColorImage(srcPath("m.jpg"), I6, w, h);
+    }
+    else{
+        loadColorImage(srcPath("t.jpg"), I0, w, h);
+        loadColorImage(srcPath("t.jpg"), I1, w, h);
+        loadColorImage(srcPath("t.jpg"), I2, w, h);
+        loadColorImage(srcPath("t.jpg"), I3, w, h);
+        loadColorImage(srcPath("t.jpg"), I4, w, h);
+        loadColorImage(srcPath("t.jpg"), I5, w, h);
+        loadColorImage(srcPath("t.jpg"), I6, w, h);
+    }
 	m = M;
 	pos = 1;
 }
