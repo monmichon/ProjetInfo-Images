@@ -47,7 +47,7 @@ int main()
 	Bouton bouton_start("bouton_start.jpg", "bouton_start_clic.jpg",width2 / 5-20, height2 / 3);			    	//DEFINITION
 	Bouton bouton_rejouer("bouton_rejouer.jpg", "bouton_rejouer_clic.jpg", width2 / 5 - 20, height2 / 5+50);       //DES BOUTONS
 	Bouton bouton_quitter("bouton_quitter.jpg", "bouton_quitter_clic.jpg", width2 / 5 - 20, height2/5+300);        //UTILES
-    Bouton bouton_flappy("oiseau2.jpg","oiseau2.jpg",width2 / 2, height2 / 3);
+    Bouton bouton_flappy("oiseau2.jpg","oiseau2_clic.jpg",width2 / 2, height2 / 3);
     Bouton bouton_mathias("m.jpg","m_clic.jpg",width2 / 2+180, height2 / 3);
     Bouton bouton_thibaud("t.jpg","t_clic.jpg",width2 / 2-180, height2 / 3);
     

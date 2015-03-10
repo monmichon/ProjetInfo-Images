@@ -1,945 +1,741 @@
 // !$*UTF8*$!
 {
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
+       archiveVersion = 1;
+       classes = {
+       };
+       objectVersion = 46;
+       objects = {
 
 /* Begin PBXAggregateTarget section */
-		EA1DA0BB6A8C4F5BB94C434C /* ZERO_CHECK */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = A4BDD0C427064A11BCCCBE6B /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
-			buildPhases = (
-				56D72F35202549F6BC0DA8F3 /* CMake Rules */,
-			);
-			dependencies = (
-			);
-			name = ZERO_CHECK;
-			productName = ZERO_CHECK;
-		};
-		F0B20BBB1E1D4177BC66E779 /* ALL_BUILD */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = A5D3FE7677C645E5834E63A3 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
-			buildPhases = (
-				FBD342893C0547D8823AE10F /* CMake Rules */,
-			);
-			dependencies = (
-				976BF32489CA4FC5B94FAE3A /* PBXTargetDependency */,
-				992D070CE21243009E6866D5 /* PBXTargetDependency */,
-			);
-			name = ALL_BUILD;
-			productName = ALL_BUILD;
-		};
+              F5BB6EFE7B50414C8912746B /* ALL_BUILD */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 795F51BE1DAE448E99BE3EB3 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildPhases = (
+                            2AFBF2B5CD644369833AE28D /* CMake Rules */,
+                     );
+                     dependencies = (
+                            FEE5DAB86ED84B50904961AC /* PBXTargetDependency */,
+                            A90A9F3612EB45A285BBCD9B /* PBXTargetDependency */,
+                     );
+                     name = ALL_BUILD;
+                     productName = ALL_BUILD;
+              };
+              0B1C072FAA5B4016869961F0 /* ZERO_CHECK */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 38E38711B3884EBAB7A815DC /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+                     buildPhases = (
+                            AFA1E96107234D84AC15E7C3 /* CMake Rules */,
+                     );
+                     dependencies = (
+                     );
+                     name = ZERO_CHECK;
+                     productName = ZERO_CHECK;
+              };
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		2560146ED23C459786FF7B70 /* Fonctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D61373E24CA347539B366B3D /* Fonctions.cpp */; settings = {COMPILER_FLAGS = ""; }; };
-		59DED4A3D8D44E91A809B07A /* Bouton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3146EC75BF44580832465EB /* Bouton.cpp */; settings = {COMPILER_FLAGS = ""; }; };
-		6FBE447742AE48D0B1EE0C02 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E8567897C074499A0F843CD /* main.cpp */; settings = {COMPILER_FLAGS = ""; }; };
-		B2E48D4A79304FAF998B8A40 /* Obstacle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A28C1CD0C114631914744A5 /* Obstacle.cpp */; settings = {COMPILER_FLAGS = ""; }; };
-		F0216F3312D0432099683AF9 /* Piaf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F294314EA4604AB0362F2 /* Piaf.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+209EFA1321404DF9A45359D3 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Bouton.cpp */ = {isa = PBXBuildFile; fileRef = 250A486A84F74CFF8A279466 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Bouton.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+78543C92D3CD4F09BB4CFC8F /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = E93E84B243984CD59DE366B5 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+4F71C5AD1C2A4C07BDD9B65C /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Classes.h */ = {isa = PBXBuildFile; fileRef = D3E245359FAD43F8B44F91AC /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Classes.h */; settings = { COMPILER_FLAGS = ""; }; };
+E21D1AC68B234E8F8891B14F /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Fonctions.cpp */ = {isa = PBXBuildFile; fileRef = 2BBF171E8AA942DAA4B77CB4 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Fonctions.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+8CBD7406A74C436D87851ACD /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Fonctions.h */ = {isa = PBXBuildFile; fileRef = 2451852D5B1D41C18CD724A3 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Fonctions.h */; settings = { COMPILER_FLAGS = ""; }; };
+6F7278542C3644E7905B1E13 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Obstacle.cpp */ = {isa = PBXBuildFile; fileRef = 5079A027C97F4DC78151F6E9 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Obstacle.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+3B2AA32BD1C647B0B408FDB8 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Piaf.cpp */ = {isa = PBXBuildFile; fileRef = 335BE68C0CE0499AAD5E1E9C /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Piaf.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+5700F01ADA554ECA8D192B31 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Piece.cpp */ = {isa = PBXBuildFile; fileRef = 74189B52730948E3BEADD703 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Piece.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+9DE6DD8BFF694A7B96810B36 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/main.cpp */ = {isa = PBXBuildFile; fileRef = E2B97321255542FB8110ADA0 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/main.cpp */; settings = { COMPILER_FLAGS = ""; }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildStyle section */
+              4E7CB5C34CE94766B36ACE9D /*  */ = {
+                     isa = PBXBuildStyle;
+              };
+              FFFAE3A4C4314B38AFD8A82C /* Debug */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Debug;
+              };
+              279CFAFE43784613807DC9A1 /* Release */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Release;
+              };
+              EE82BC975789423090CF735B /* MinSizeRel */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = MinSizeRel;
+              };
+              EB805C03DD8E44258AEA53BA /* RelWithDebInfo */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = RelWithDebInfo;
+              };
+/* End PBXBuildStyle section */
+
 /* Begin PBXContainerItemProxy section */
-		0473B1338D1F4C54BD3DE25C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A55B3701A3074EDAB618A2B3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA1DA0BB6A8C4F5BB94C434C;
-			remoteInfo = ZERO_CHECK;
-		};
-		7C0B8EC0B6094C13818D9066 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A55B3701A3074EDAB618A2B3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA1DA0BB6A8C4F5BB94C434C;
-			remoteInfo = ZERO_CHECK;
-		};
-		F72D9EA5B82D4F66BB4AED52 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A55B3701A3074EDAB618A2B3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 926CB003BB114776A8A47E0E;
-			remoteInfo = Projet;
-		};
+              98590802FF77499FBBDB5625 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 439BFC9B8A9B419AADACEED9 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = E8638E3F5DB542C5B5AE0370;
+                     remoteInfo = Projet;
+              };
+              6FD7B98D66DB482DAC7F5B2C /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 439BFC9B8A9B419AADACEED9 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 0B1C072FAA5B4016869961F0;
+                     remoteInfo = ZERO_CHECK;
+              };
+              77C19CB00B6D494E825FA908 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 439BFC9B8A9B419AADACEED9 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 0B1C072FAA5B4016869961F0;
+                     remoteInfo = ZERO_CHECK;
+              };
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D3DC274139244E6AB03756C /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		2A28C1CD0C114631914744A5 /* Obstacle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = Obstacle.cpp; sourceTree = SOURCE_ROOT; };
-		2C7F294314EA4604AB0362F2 /* Piaf.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = Piaf.cpp; sourceTree = SOURCE_ROOT; };
-		4358C7B41AA9B7DE00134485 /* Piece.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Piece.cpp; sourceTree = "<group>"; };
-		5E8567897C074499A0F843CD /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = main.cpp; sourceTree = SOURCE_ROOT; };
-		679C9F7E7C2B417F969D1D50 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		840DE315A55848FFB0778AAE /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		BE7003CA13D04A3AA94E3E58 /* Projet */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = Projet; sourceTree = BUILT_PRODUCTS_DIR; };
-		D61373E24CA347539B366B3D /* Fonctions.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = Fonctions.cpp; sourceTree = SOURCE_ROOT; };
-		E70D9840263543FDB9C1EF8A /* Fonctions.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = Fonctions.h; sourceTree = SOURCE_ROOT; };
-		F0F6AD101F9949F89AE96458 /* Classes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = Classes.h; sourceTree = SOURCE_ROOT; };
-		F3146EC75BF44580832465EB /* Bouton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = Bouton.cpp; sourceTree = SOURCE_ROOT; };
+6D747F09CBE3436583408367 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+250A486A84F74CFF8A279466 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Bouton.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "Bouton.cpp"; path = "Bouton.cpp"; sourceTree = SOURCE_ROOT; };
+E93E84B243984CD59DE366B5 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+D3E245359FAD43F8B44F91AC /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Classes.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "Classes.h"; path = "Classes.h"; sourceTree = SOURCE_ROOT; };
+2BBF171E8AA942DAA4B77CB4 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Fonctions.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "Fonctions.cpp"; path = "Fonctions.cpp"; sourceTree = SOURCE_ROOT; };
+2451852D5B1D41C18CD724A3 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Fonctions.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "Fonctions.h"; path = "Fonctions.h"; sourceTree = SOURCE_ROOT; };
+5079A027C97F4DC78151F6E9 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Obstacle.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "Obstacle.cpp"; path = "Obstacle.cpp"; sourceTree = SOURCE_ROOT; };
+335BE68C0CE0499AAD5E1E9C /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Piaf.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "Piaf.cpp"; path = "Piaf.cpp"; sourceTree = SOURCE_ROOT; };
+74189B52730948E3BEADD703 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Piece.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "Piece.cpp"; path = "Piece.cpp"; sourceTree = SOURCE_ROOT; };
+E2B97321255542FB8110ADA0 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/main.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "main.cpp"; path = "main.cpp"; sourceTree = SOURCE_ROOT; };
+D064A254A542493390F6CC43 /* Projet */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = Projet; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+793EE5C909364E35A12E94F5 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		1157C777D27B48BE9967212E /* ZERO_CHECK */ = {
-			isa = PBXGroup;
-			children = (
-				BFC577172C27455FABBF63F9 /* CMake Rules */,
-				0D3DC274139244E6AB03756C /* CMakeLists.txt */,
-			);
-			name = ZERO_CHECK;
-			sourceTree = "<group>";
-		};
-		1CB6FB888F9E4030910A8A4F /* ALL_BUILD */ = {
-			isa = PBXGroup;
-			children = (
-				C22ADEA8276A44F9A46B9D81 /* CMake Rules */,
-				840DE315A55848FFB0778AAE /* CMakeLists.txt */,
-			);
-			name = ALL_BUILD;
-			sourceTree = "<group>";
-		};
-		1E9A642266B34CC3A900F850 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		6029E3E963CE4D15A734668E /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				F0F6AD101F9949F89AE96458 /* Classes.h */,
-				E70D9840263543FDB9C1EF8A /* Fonctions.h */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		84337D4F2E9743BFB7BB43F5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BE7003CA13D04A3AA94E3E58 /* Projet */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		AFDD593B727E44EE8C48455D /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				F3146EC75BF44580832465EB /* Bouton.cpp */,
-				4358C7B41AA9B7DE00134485 /* Piece.cpp */,
-				D61373E24CA347539B366B3D /* Fonctions.cpp */,
-				2A28C1CD0C114631914744A5 /* Obstacle.cpp */,
-				2C7F294314EA4604AB0362F2 /* Piaf.cpp */,
-				5E8567897C074499A0F843CD /* main.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		BA80F2C6606149BAB7D5D37A /* Projet */ = {
-			isa = PBXGroup;
-			children = (
-				AFDD593B727E44EE8C48455D /* Source Files */,
-				6029E3E963CE4D15A734668E /* Header Files */,
-				679C9F7E7C2B417F969D1D50 /* CMakeLists.txt */,
-			);
-			name = Projet;
-			sourceTree = "<group>";
-		};
-		BD0F98516762471BAF5F79DF = {
-			isa = PBXGroup;
-			children = (
-				CD0880B4B0FC4F89A6FD671B /* Sources */,
-				1E9A642266B34CC3A900F850 /* Resources */,
-				84337D4F2E9743BFB7BB43F5 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		BFC577172C27455FABBF63F9 /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		C22ADEA8276A44F9A46B9D81 /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		CD0880B4B0FC4F89A6FD671B /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				BA80F2C6606149BAB7D5D37A /* Projet */,
-				1CB6FB888F9E4030910A8A4F /* ALL_BUILD */,
-				1157C777D27B48BE9967212E /* ZERO_CHECK */,
-			);
-			name = Sources;
-			sourceTree = "<group>";
-		};
+              D8FAA3DDC2644A8D9A420C8C  = {
+                     isa = PBXGroup;
+                     children = (
+                            CABB8E22CBAA4FE49BFC58F3 /* Sources */,
+                            942043FD9C9B4EA3A3CF62AD /* Resources */,
+                            C6DD0634D3EA48998FDDB87F /* Products */,
+                     );
+                     sourceTree = "<group>";
+              };
+              CABB8E22CBAA4FE49BFC58F3 /* Sources */ = {
+                     isa = PBXGroup;
+                     children = (
+                            2F42D23E7AFF415D83FB1C66 /* Projet */,
+                            D6F9F97FB01A494AB3101C5A /* ALL_BUILD */,
+                            FEA6C491B74D41D382653398 /* ZERO_CHECK */,
+                     );
+                     name = Sources;
+                     sourceTree = "<group>";
+              };
+              942043FD9C9B4EA3A3CF62AD /* Resources */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Resources;
+                     sourceTree = "<group>";
+              };
+              2F42D23E7AFF415D83FB1C66 /* Projet */ = {
+                     isa = PBXGroup;
+                     children = (
+                            3FF25377E32B405B96D67CB0 /* Source Files */,
+                            A1F9D6E6666A426181F486E4 /* Header Files */,
+                            E93E84B243984CD59DE366B5 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/CMakeLists.txt */,
+                     );
+                     name = Projet;
+                     sourceTree = "<group>";
+              };
+              3FF25377E32B405B96D67CB0 /* Source Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            250A486A84F74CFF8A279466 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Bouton.cpp */,
+                            2BBF171E8AA942DAA4B77CB4 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Fonctions.cpp */,
+                            5079A027C97F4DC78151F6E9 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Obstacle.cpp */,
+                            335BE68C0CE0499AAD5E1E9C /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Piaf.cpp */,
+                            74189B52730948E3BEADD703 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Piece.cpp */,
+                            E2B97321255542FB8110ADA0 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/main.cpp */,
+                     );
+                     name = "Source Files";
+                     sourceTree = "<group>";
+              };
+              A1F9D6E6666A426181F486E4 /* Header Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            D3E245359FAD43F8B44F91AC /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Classes.h */,
+                            2451852D5B1D41C18CD724A3 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Fonctions.h */,
+                     );
+                     name = "Header Files";
+                     sourceTree = "<group>";
+              };
+              D6F9F97FB01A494AB3101C5A /* ALL_BUILD */ = {
+                     isa = PBXGroup;
+                     children = (
+                            107FB8DCA23147C3B7765BA0 /* CMake Rules */,
+                            6D747F09CBE3436583408367 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/CMakeLists.txt */,
+                     );
+                     name = ALL_BUILD;
+                     sourceTree = "<group>";
+              };
+              107FB8DCA23147C3B7765BA0 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              FEA6C491B74D41D382653398 /* ZERO_CHECK */ = {
+                     isa = PBXGroup;
+                     children = (
+                            6DFBF744355C487D8F3FF756 /* CMake Rules */,
+                            793EE5C909364E35A12E94F5 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/CMakeLists.txt */,
+                     );
+                     name = ZERO_CHECK;
+                     sourceTree = "<group>";
+              };
+              6DFBF744355C487D8F3FF756 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              C6DD0634D3EA48998FDDB87F /* Products */ = {
+                     isa = PBXGroup;
+                     children = (
+                            D064A254A542493390F6CC43 /* Projet */,
+                     );
+                     name = Products;
+                     sourceTree = "<group>";
+              };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		926CB003BB114776A8A47E0E /* Projet */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D1FF4CF77F5145CEAC5D2B41 /* Build configuration list for PBXNativeTarget "Projet" */;
-			buildPhases = (
-				A3D95E3185E1436187E6CB85 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1973A328579A4D999F0BAC0D /* PBXTargetDependency */,
-			);
-			name = Projet;
-			productName = Projet;
-			productReference = BE7003CA13D04A3AA94E3E58 /* Projet */;
-			productType = "com.apple.product-type.tool";
-		};
+              E8638E3F5DB542C5B5AE0370 /* Projet */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = B9B5FB9DE5B14FE09C7675FF /* Build configuration list for PBXNativeTarget "Projet" */;
+                     buildPhases = (
+                            EF55168A7B3E421C9CBC00C6 /* Sources */,
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                            2CDCACE6B4C548F48B7CF3DF /* PBXTargetDependency */,
+                     );
+                     name = Projet;
+                     productName = Projet;
+                     productReference = D064A254A542493390F6CC43 /* Projet */;
+                     productType = "com.apple.product-type.tool";
+              };
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A55B3701A3074EDAB618A2B3 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				BuildIndependentTargetsInParallel = YES;
-			};
-			buildConfigurationList = EF314948D9B145D292D9D89F /* Build configuration list for PBXProject "Project" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = BD0F98516762471BAF5F79DF;
-			projectDirPath = ..;
-			projectRoot = "";
-			targets = (
-				F0B20BBB1E1D4177BC66E779 /* ALL_BUILD */,
-				926CB003BB114776A8A47E0E /* Projet */,
-				EA1DA0BB6A8C4F5BB94C434C /* ZERO_CHECK */,
-			);
-		};
+              439BFC9B8A9B419AADACEED9 /* Project object */ = {
+                     isa = PBXProject;
+                     attributes = {
+                            BuildIndependentTargetsInParallel = YES;
+                     };
+                     buildConfigurationList = 3CB290EBCA82481DB5DAEB77 /* Build configuration list for PBXProject  "Project" */;
+                     buildSettings = {
+                     };
+                     buildStyles = (
+                            FFFAE3A4C4314B38AFD8A82C /* Debug */,
+                            279CFAFE43784613807DC9A1 /* Release */,
+                            EE82BC975789423090CF735B /* MinSizeRel */,
+                            EB805C03DD8E44258AEA53BA /* RelWithDebInfo */,
+                     );
+                     compatibilityVersion = "Xcode 3.2";
+                     hasScannedForEncodings = 0;
+                     mainGroup = D8FAA3DDC2644A8D9A420C8C;
+                     projectDirPath = "..";
+                     projectRoot = "";
+                     targets = (
+                            F5BB6EFE7B50414C8912746B /* ALL_BUILD */,
+                            E8638E3F5DB542C5B5AE0370 /* Projet */,
+                            0B1C072FAA5B4016869961F0 /* ZERO_CHECK */,
+                     );
+              };
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		56D72F35202549F6BC0DA8F3 /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/ThibaudMonmirel1/Documents/Informatique/Projet\\ info/ProjetInfo-Images/build -f /Users/ThibaudMonmirel1/Documents/Informatique/Projet\\ info/ProjetInfo-Images/build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
-			showEnvVarsInLog = 0;
-		};
-		FBD342893C0547D8823AE10F /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/ThibaudMonmirel1/Documents/Informatique/Projet\\ info/ProjetInfo-Images/build -f /Users/ThibaudMonmirel1/Documents/Informatique/Projet\\ info/ProjetInfo-Images/build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
-			showEnvVarsInLog = 0;
-		};
+              E8CE204AE42F4A83B7565B95 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              2AFBF2B5CD644369833AE28D /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/ThibaudMonmirel1/Documents/Informatique/Projet\\ info/ProjetInfo-Images/build -f /Users/ThibaudMonmirel1/Documents/Informatique/Projet\\ info/ProjetInfo-Images/build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              C7A3E8C7E33F436CA9EF63DC /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              AFA1E96107234D84AC15E7C3 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/ThibaudMonmirel1/Documents/Informatique/Projet\\ info/ProjetInfo-Images/build -f /Users/ThibaudMonmirel1/Documents/Informatique/Projet\\ info/ProjetInfo-Images/build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A3D95E3185E1436187E6CB85 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				59DED4A3D8D44E91A809B07A /* Bouton.cpp in Sources */,
-				2560146ED23C459786FF7B70 /* Fonctions.cpp in Sources */,
-				B2E48D4A79304FAF998B8A40 /* Obstacle.cpp in Sources */,
-				F0216F3312D0432099683AF9 /* Piaf.cpp in Sources */,
-				6FBE447742AE48D0B1EE0C02 /* main.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+              EF55168A7B3E421C9CBC00C6 /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            209EFA1321404DF9A45359D3 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Bouton.cpp */,
+                            E21D1AC68B234E8F8891B14F /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Fonctions.cpp */,
+                            6F7278542C3644E7905B1E13 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Obstacle.cpp */,
+                            3B2AA32BD1C647B0B408FDB8 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Piaf.cpp */,
+                            5700F01ADA554ECA8D192B31 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/Piece.cpp */,
+                            9DE6DD8BFF694A7B96810B36 /* /Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/main.cpp */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1973A328579A4D999F0BAC0D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA1DA0BB6A8C4F5BB94C434C /* ZERO_CHECK */;
-			targetProxy = 0473B1338D1F4C54BD3DE25C /* PBXContainerItemProxy */;
-		};
-		976BF32489CA4FC5B94FAE3A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 926CB003BB114776A8A47E0E /* Projet */;
-			targetProxy = F72D9EA5B82D4F66BB4AED52 /* PBXContainerItemProxy */;
-		};
-		992D070CE21243009E6866D5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA1DA0BB6A8C4F5BB94C434C /* ZERO_CHECK */;
-			targetProxy = 7C0B8EC0B6094C13818D9066 /* PBXContainerItemProxy */;
-		};
+              FEE5DAB86ED84B50904961AC /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = E8638E3F5DB542C5B5AE0370 /* Projet */;
+                     targetProxy = 98590802FF77499FBBDB5625 /* PBXContainerItemProxy */;
+              };
+              A90A9F3612EB45A285BBCD9B /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 0B1C072FAA5B4016869961F0 /* ZERO_CHECK */;
+                     targetProxy = 6FD7B98D66DB482DAC7F5B2C /* PBXContainerItemProxy */;
+              };
+              2CDCACE6B4C548F48B7CF3DF /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 0B1C072FAA5B4016869961F0 /* ZERO_CHECK */;
+                     targetProxy = 77C19CB00B6D494E825FA908 /* PBXContainerItemProxy */;
+              };
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		08594F2C77E94793B7945B39 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks,
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/usr/share/Imagine++/include",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers,
-					"/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers,
-				);
-				INSTALL_PATH = "";
-				OTHER_CFLAGS = "  ";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-			};
-			name = RelWithDebInfo;
-		};
-		208164E6F15A420785A31254 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks,
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/usr/share/Imagine++/include",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers,
-					"/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers,
-				);
-				INSTALL_PATH = "";
-				OTHER_CFLAGS = "  ";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-			};
-			name = Debug;
-		};
-		22E927FF374B40A083478093 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk;
-				SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build/build";
-			};
-			name = Debug;
-		};
-		23AF44B3F73D42618F8921A9 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks,
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/usr/share/Imagine++/include",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers,
-					"/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers,
-				);
-				INSTALL_PATH = "";
-				OTHER_CFLAGS = "  ";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-			};
-			name = MinSizeRel;
-		};
-		304773BB1A7840B8AA0F661E /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks,
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					QT_CORE_LIB,
-					QT_NO_DEBUG,
-					QT_WIDGETS_LIB,
-					QT_GUI_LIB,
-					QT_OPENGL_LIB,
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/usr/share/Imagine++/include",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers,
-					"/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers,
-				);
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CFLAGS = (
-					"-DNDEBUG",
-					"-DSRCDIR=\"/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images\"",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNDEBUG",
-					"-DSRCDIR=\"/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images\"",
-				);
-				OTHER_LDFLAGS = (
-					"-L\"/usr/share/Imagine++/lib\"",
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lImagineGraphics",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/QtOpenGL,
-					"-framework",
-					AGL,
-					"-framework",
-					OpenGL,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/QtWidgets,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/QtGui,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/QtCore,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = Projet;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-			};
-			name = MinSizeRel;
-		};
-		3E06063828014CEFA3BE7EEA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk;
-				SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build/build";
-			};
-			name = Release;
-		};
-		49EE206F30224E9E83B38038 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks,
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					QT_CORE_LIB,
-					QT_NO_DEBUG,
-					QT_WIDGETS_LIB,
-					QT_GUI_LIB,
-					QT_OPENGL_LIB,
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/usr/share/Imagine++/include",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers,
-					"/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers,
-				);
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CFLAGS = (
-					"-DNDEBUG",
-					"-DSRCDIR=\"/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images\"",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNDEBUG",
-					"-DSRCDIR=\"/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images\"",
-				);
-				OTHER_LDFLAGS = (
-					"-L\"/usr/share/Imagine++/lib\"",
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lImagineGraphics",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/QtOpenGL,
-					"-framework",
-					AGL,
-					"-framework",
-					OpenGL,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/QtWidgets,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/QtGui,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/QtCore,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = Projet;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-			};
-			name = RelWithDebInfo;
-		};
-		5743C5934FFC4728A793B59B /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks,
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/usr/share/Imagine++/include",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers,
-					"/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers,
-				);
-				INSTALL_PATH = "";
-				OTHER_CFLAGS = "  ";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-			};
-			name = RelWithDebInfo;
-		};
-		6BB6B9C361B74E99B3E8CF6E /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk;
-				SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build/build";
-			};
-			name = MinSizeRel;
-		};
-		8FD722755F8D4E05B5919AF5 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk;
-				SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build/build";
-			};
-			name = RelWithDebInfo;
-		};
-		9CCDB24A57464BA3AABD7866 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks,
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/usr/share/Imagine++/include",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers,
-					"/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers,
-				);
-				INSTALL_PATH = "";
-				OTHER_CFLAGS = "  ";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-			};
-			name = Release;
-		};
-		BA8ECBA7EF5B4DBF8E2F7C3A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks,
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					QT_CORE_LIB,
-					QT_WIDGETS_LIB,
-					QT_GUI_LIB,
-					QT_OPENGL_LIB,
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/usr/share/Imagine++/include",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers,
-					"/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers,
-				);
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CFLAGS = "   -DSRCDIR=\"/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images\"  ";
-				OTHER_CPLUSPLUSFLAGS = "   -DSRCDIR=\"/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images\"  ";
-				OTHER_LDFLAGS = (
-					"-L\"/usr/share/Imagine++/lib\"",
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lImagineGraphics",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/QtOpenGL,
-					"-framework",
-					AGL,
-					"-framework",
-					OpenGL,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/QtWidgets,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/QtGui,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/QtCore,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = Projet;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-			};
-			name = Debug;
-		};
-		C3C980B4D2E64A37A417E511 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks,
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/usr/share/Imagine++/include",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers,
-					"/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers,
-				);
-				INSTALL_PATH = "";
-				OTHER_CFLAGS = "  ";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-			};
-			name = Debug;
-		};
-		C3F28E82699646B6ABDABCC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks,
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/usr/share/Imagine++/include",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers,
-					"/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers,
-				);
-				INSTALL_PATH = "";
-				OTHER_CFLAGS = "  ";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-			};
-			name = Release;
-		};
-		F21735B9760148D783F4DAC0 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks,
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/usr/share/Imagine++/include",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers,
-					"/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers,
-				);
-				INSTALL_PATH = "";
-				OTHER_CFLAGS = "  ";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-			};
-			name = MinSizeRel;
-		};
-		FF39130BA6D646A494CE105F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks,
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					QT_CORE_LIB,
-					QT_NO_DEBUG,
-					QT_WIDGETS_LIB,
-					QT_GUI_LIB,
-					QT_OPENGL_LIB,
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"/usr/share/Imagine++/include",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers,
-					"/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers,
-					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers,
-				);
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CFLAGS = (
-					"-DNDEBUG",
-					"-DSRCDIR=\"/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images\"",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNDEBUG",
-					"-DSRCDIR=\"/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images\"",
-				);
-				OTHER_LDFLAGS = (
-					"-L\"/usr/share/Imagine++/lib\"",
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lImagineGraphics",
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/QtOpenGL,
-					"-framework",
-					AGL,
-					"-framework",
-					OpenGL,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/QtWidgets,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/QtGui,
-					/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/QtCore,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = Projet;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-			};
-			name = Release;
-		};
+              08A6E436154441E8870EEEE2 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
+                            SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build/build";
+                     };
+                     name = Debug;
+              };
+              3923D4B873F84830A65F2C90 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
+                            SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build/build";
+                     };
+                     name = Release;
+              };
+              9CA355A3CFCA4B528D912964 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
+                            SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build/build";
+                     };
+                     name = MinSizeRel;
+              };
+              7E6D447328A84D43AA9944D4 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
+                            SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build/build";
+                     };
+                     name = RelWithDebInfo;
+              };
+              57218E0C02CB4C4E88F5A3F4 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            FRAMEWORK_SEARCH_PATHS = ("/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/usr/share/Imagine++/include", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              AA5474FEC53C4146BA10A43B /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            FRAMEWORK_SEARCH_PATHS = ("/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/usr/share/Imagine++/include", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              92F0C023E4CC4CDDA6CE1397 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            FRAMEWORK_SEARCH_PATHS = ("/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/usr/share/Imagine++/include", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              7BB7558ADC91497F955A5C69 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            FRAMEWORK_SEARCH_PATHS = ("/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/usr/share/Imagine++/include", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              22C64C5B2AA84258812D49E0 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            FRAMEWORK_SEARCH_PATHS = ("/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", QT_CORE_LIB, QT_WIDGETS_LIB, QT_GUI_LIB, QT_OPENGL_LIB, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/usr/share/Imagine++/include", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers", );
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = "";
+                            OTHER_CFLAGS = "   -DSRCDIR=\"/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images\"  ";
+                            OTHER_CPLUSPLUSFLAGS = "   -DSRCDIR=\"/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images\"  ";
+                            OTHER_LDFLAGS = "-L\"/usr/share/Imagine++/lib\" -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lImagineGraphics /Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/QtOpenGL -framework AGL -framework OpenGL /Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/QtWidgets /Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/QtGui /Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/QtCore";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = Projet;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              6FD61518C0F048429BFDDC1F /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            FRAMEWORK_SEARCH_PATHS = ("/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", QT_CORE_LIB, QT_NO_DEBUG, QT_WIDGETS_LIB, QT_GUI_LIB, QT_OPENGL_LIB, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/usr/share/Imagine++/include", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers", );
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = "";
+                            OTHER_CFLAGS = "    -DNDEBUG -DSRCDIR=\"/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images\"  ";
+                            OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -DSRCDIR=\"/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images\"  ";
+                            OTHER_LDFLAGS = "-L\"/usr/share/Imagine++/lib\" -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lImagineGraphics /Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/QtOpenGL -framework AGL -framework OpenGL /Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/QtWidgets /Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/QtGui /Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/QtCore";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = Projet;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              013C9545E13E4517A0C0B2CB /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            FRAMEWORK_SEARCH_PATHS = ("/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = s;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", QT_CORE_LIB, QT_NO_DEBUG, QT_WIDGETS_LIB, QT_GUI_LIB, QT_OPENGL_LIB, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/usr/share/Imagine++/include", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers", );
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = "";
+                            OTHER_CFLAGS = "    -DNDEBUG -DSRCDIR=\"/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images\"  ";
+                            OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -DSRCDIR=\"/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images\"  ";
+                            OTHER_LDFLAGS = "-L\"/usr/share/Imagine++/lib\" -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lImagineGraphics /Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/QtOpenGL -framework AGL -framework OpenGL /Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/QtWidgets /Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/QtGui /Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/QtCore";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = Projet;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              3D88E7C093E84928A6FDB88F /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            FRAMEWORK_SEARCH_PATHS = ("/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 2;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", QT_CORE_LIB, QT_NO_DEBUG, QT_WIDGETS_LIB, QT_GUI_LIB, QT_OPENGL_LIB, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/usr/share/Imagine++/include", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers", );
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = "";
+                            OTHER_CFLAGS = "       -DNDEBUG -DSRCDIR=\"/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images\"  ";
+                            OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG -DSRCDIR=\"/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images\"  ";
+                            OTHER_LDFLAGS = "-L\"/usr/share/Imagine++/lib\" -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lImagineGraphics /Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/QtOpenGL -framework AGL -framework OpenGL /Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/QtWidgets /Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/QtGui /Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/QtCore";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = Projet;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              4192294AE0494218AC4ED692 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            FRAMEWORK_SEARCH_PATHS = ("/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/usr/share/Imagine++/include", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              55C82AEEF23C4E9CA28870A2 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            FRAMEWORK_SEARCH_PATHS = ("/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/usr/share/Imagine++/include", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              2E25DE70C2FA43478D0DF227 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            FRAMEWORK_SEARCH_PATHS = ("/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/usr/share/Imagine++/include", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              4170EC0BB4584459886BBD80 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            FRAMEWORK_SEARCH_PATHS = ("/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/usr/share/Imagine++/include", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtCore.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/mkspecs/macx-clang", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtWidgets.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtGui.framework/Headers", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers", "/Users/ThibaudMonmirel1/Qt/5.4/clang_64/lib/QtOpenGL.framework/Headers", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/ThibaudMonmirel1/Documents/Informatique/Projet info/ProjetInfo-Images/build";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A4BDD0C427064A11BCCCBE6B /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C3C980B4D2E64A37A417E511 /* Debug */,
-				9CCDB24A57464BA3AABD7866 /* Release */,
-				23AF44B3F73D42618F8921A9 /* MinSizeRel */,
-				08594F2C77E94793B7945B39 /* RelWithDebInfo */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		A5D3FE7677C645E5834E63A3 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				208164E6F15A420785A31254 /* Debug */,
-				C3F28E82699646B6ABDABCC4 /* Release */,
-				F21735B9760148D783F4DAC0 /* MinSizeRel */,
-				5743C5934FFC4728A793B59B /* RelWithDebInfo */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		D1FF4CF77F5145CEAC5D2B41 /* Build configuration list for PBXNativeTarget "Projet" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BA8ECBA7EF5B4DBF8E2F7C3A /* Debug */,
-				FF39130BA6D646A494CE105F /* Release */,
-				304773BB1A7840B8AA0F661E /* MinSizeRel */,
-				49EE206F30224E9E83B38038 /* RelWithDebInfo */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		EF314948D9B145D292D9D89F /* Build configuration list for PBXProject "Project" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				22E927FF374B40A083478093 /* Debug */,
-				3E06063828014CEFA3BE7EEA /* Release */,
-				6BB6B9C361B74E99B3E8CF6E /* MinSizeRel */,
-				8FD722755F8D4E05B5919AF5 /* RelWithDebInfo */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
+              3CB290EBCA82481DB5DAEB77 /* Build configuration list for PBXProject  "Project" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            08A6E436154441E8870EEEE2 /* Debug */,
+                            3923D4B873F84830A65F2C90 /* Release */,
+                            9CA355A3CFCA4B528D912964 /* MinSizeRel */,
+                            7E6D447328A84D43AA9944D4 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              795F51BE1DAE448E99BE3EB3 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            57218E0C02CB4C4E88F5A3F4 /* Debug */,
+                            AA5474FEC53C4146BA10A43B /* Release */,
+                            92F0C023E4CC4CDDA6CE1397 /* MinSizeRel */,
+                            7BB7558ADC91497F955A5C69 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              B9B5FB9DE5B14FE09C7675FF /* Build configuration list for PBXNativeTarget "Projet" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            22C64C5B2AA84258812D49E0 /* Debug */,
+                            6FD61518C0F048429BFDDC1F /* Release */,
+                            013C9545E13E4517A0C0B2CB /* MinSizeRel */,
+                            3D88E7C093E84928A6FDB88F /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              38E38711B3884EBAB7A815DC /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            4192294AE0494218AC4ED692 /* Debug */,
+                            55C82AEEF23C4E9CA28870A2 /* Release */,
+                            2E25DE70C2FA43478D0DF227 /* MinSizeRel */,
+                            4170EC0BB4584459886BBD80 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
 /* End XCConfigurationList section */
-	};
-	rootObject = A55B3701A3074EDAB618A2B3 /* Project object */;
+       };
+       rootObject = 439BFC9B8A9B419AADACEED9;
 }
