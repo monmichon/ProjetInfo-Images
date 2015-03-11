@@ -30,10 +30,10 @@ int main()
 
 	Color* fond;													//CHARGEMENT DU
 	loadColorImage(srcPath("fond.jpg"), fond, width2, height2);     //FOND ET
-	openWindow(width2,height2, "FlaPonts Bird");				    //OUVERTURE FENETRE
+	Window W1=openWindow(width2+20,height2+20, "FlaPonts Bird");				    //OUVERTURE FENETRE
 
 	
-	putColorImage(IntPoint2(-1, -1), fond, width2, height2);//affichage du fond  //AFFICHAGE DE L'ECRAN
+	putColorImage(IntPoint2(0, 0), fond, width2, height2);//affichage du fond  //AFFICHAGE DE L'ECRAN
     
     
     
@@ -47,52 +47,50 @@ int main()
 	Bouton bouton_start("bouton_start.jpg", "bouton_start_clic.jpg",width2 / 5-20, height2 / 3);			    	//DEFINITION
 	Bouton bouton_rejouer("bouton_rejouer.jpg", "bouton_rejouer_clic.jpg", width2 / 5 - 20, height2 / 5+50);       //DES BOUTONS
 	Bouton bouton_quitter("bouton_quitter.jpg", "bouton_quitter_clic.jpg", width2 / 5 - 20, height2/5+300);        //UTILES
-    Bouton bouton_flappy("oiseau2.jpg","oiseau2_clic.jpg",width2 / 2, height2 / 3);
-    Bouton bouton_mathias("m.jpg","m_clic.jpg",width2 / 2+180, height2 / 3);
-    Bouton bouton_thibaud("t.jpg","t_clic.jpg",width2 / 2-180, height2 / 3);
+	int h_bouton = height2 / 2-17, step = 120;
+    Bouton bouton_flappy("oiseau_bouton.jpg","oiseau_bouton_clic.jpg",width2 / 2-20, h_bouton);
+    Bouton bouton_mathias("m.jpg","m_clic.jpg",width2/2-20+step, h_bouton);
+    Bouton bouton_thibaud("t.jpg","t_clic.jpg",width2 /2-10-step,h_bouton);
+	Bouton bouton_fond("fond_bouton.jpg","fond_bouton.jpg",width2/5-20,h_bouton-17);
     
-    drawString(width2/2-180,height2/3-100,"choisissez",YELLOW,50);
-    drawString(width2/2-180,height2/3-10,"votre",YELLOW,50);
-    drawString(width2/2-180,height2/3+30,"personnage",YELLOW,50);
+	bouton_start.afficher();
+	bouton_fond.afficher();
     bouton_flappy.afficher();
     bouton_mathias.afficher();
     bouton_thibaud.afficher();
     
-    while (!but)
+    while (!but)  
     {
         getMouse(X, Y);
-        but =( bouton_mathias.test(X,Y)||bouton_thibaud.test(X,Y)||bouton_flappy.test(X,Y));
+        but =(bouton_mathias.test(X,Y)||bouton_thibaud.test(X,Y)||bouton_flappy.test(X,Y)||bouton_start.test(X,Y));
     }
     if(bouton_mathias.test(X,Y))
-    {
+	{
         bouton_mathias.clic();
         perso=1;
     }
-    else if(bouton_thibaud.test(X,Y)){
+    else if(bouton_thibaud.test(X,Y))
+	{
         bouton_thibaud.clic();
         perso=2;
     }
-    else{
+    else if(bouton_flappy.test(X,Y))
+	{
         bouton_flappy.clic();
         perso=0;
     }
+	else
+	{
+		bouton_start.clic();
+		perso = 0;
+	}
     but=false;
     
-    putColorImage(IntPoint2(-1, -1), fond, width2, height2);        //affichage du fond         //AFFICHAGE DE L'ECRAN
-    Piaf p(x0, height/2, 0, m, perso);                                                          //
+    putColorImage(IntPoint2(-1, -1), fond, width2, height2);        //affichage du fond 
+    Piaf p(x0, height/2, 0, m, perso);                              //
     p.afficher();                                                   //affichage de l'oiseau
     
-    bouton_start.afficher();        //
-	while (!but)                    //
-		but = bouton_start.test();  //GESTION BOUTON START
-	bouton_start.clic();            //
-	milliSleep(50);                 //
-
 	t.reset(); //On lance le chrono
-
-    
-                                         //D'OUVERTURE
-    
 
 	do  //On entre dans la boucle d'éxécution (en sortir signifie quitter le jeu, voir while à la fin)
 	{
@@ -120,7 +118,7 @@ int main()
 				else
 					obs[n - 1].seth(h);
 
-				u = rand() % 5 ; //lorsqu'on crée un obstacle, il y a une chance sur 3 de créer une pièce située à une hauteur aléatoire
+				u = rand() % 7 ; //lorsqu'on crée un obstacle, il y a une chance sur 3 de créer une pièce située à une hauteur aléatoire
 				if (u == 0){
 					piece.existence(true);
 					u = double(rand()) / RAND_MAX;
@@ -236,6 +234,7 @@ int main()
 		{
 			bouton_quitter.clic();
 			quitter = true;
+			closeWindow(W1);
 		}
 	}while (!quitter);  //fin boucle jeu
 	return 0;

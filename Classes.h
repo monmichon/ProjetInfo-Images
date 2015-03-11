@@ -23,9 +23,10 @@ class Piaf{
 
 	int pos;//repère pour savoir quelle image afficher parmi les 7
     int perso; // choix du personnage
+
+public:
 	void setpos(int X, int Y);
 	void setv(double vY);
-public:
 	Piaf(double x,double y,double vx, double m, int perso);
 	int getw();
 	int geth();
