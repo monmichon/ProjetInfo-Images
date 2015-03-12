@@ -20,10 +20,10 @@ void Obstacle::bouger(double vx){
 	x += vx*dt;
 }
 
-bool Obstacle::test(Piaf p){
-	int W = p.getw();
-	int H = p.geth();
-	return((p.getx()< (x + l-5)) && (p.getx() > x-W+5)&& (p.gety()<y-5 || p.gety()>y+h-H+5)); //si p est dans l'obstacle, on retourne true
+bool Obstacle::test(Piaf*  p){
+	int W = (*p).getw();
+	int H = (*p).geth();
+	return(((*p).getx()< (x + l-5)) && ((*p).getx() > x-W+5)&& ((*p).gety()<y-5 || (*p).gety()>y+h-H+5)); //si p est dans l'obstacle, on retourne true
 }
 
 void Obstacle::setx(double X){

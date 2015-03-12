@@ -18,31 +18,23 @@ double u = 0, v = 0, h = 0; //u, v, h variables aléatoires pour génération obsta
 bool b = false, c = false, booleen = false, but = false, quitter = false;//booleens utiles pour la suite (mémoire)
 
 int X, Y; //Positions de la souris pour clics quand plusieurs boutons
-int perso; // permet de choisir le personnage au dbut du jeu
+int perso; // permet de choisir le personnage au debut du jeu
+int best; //pour meilleur score
 int main()
 {
 	srand(time(NULL));
 
-    Piece piece(3*width / 4, height / 2, 1); //Création d'une piece pour bonus
+    Piece piece(3*width / 4, height / 2); //Création d'une piece pour bonus
 	Obstacle obs[N];						 //liste de tout les obstacles
 
 	Timer t; //Définition d'un chrono pour contrôler temps d'éxécution de chaque boucle
 
-	Color* fond;													//CHARGEMENT DU
-	loadColorImage(srcPath("fond.jpg"), fond, width2, height2);     //FOND ET
-	Window W1=openWindow(width2+20,height2+20, "FlaPonts Bird");				    //OUVERTURE FENETRE
+	Color* fond;													     //CHARGEMENT DU
+	loadColorImage(srcPath("fond.jpg"), fond, width2, height2);          //FOND ET
+	Window W1 = openWindow(width2, height2, "FlaPonts Bird");  //OUVERTURE FENETRE
 
 	
-	putColorImage(IntPoint2(0, 0), fond, width2, height2);//affichage du fond  //AFFICHAGE DE L'ECRAN
-    
-    
-    
-    
-    
-
-	ifstream score(srcPath("savegame.txt"));  //ON OUVRE UN FICHIER
-	int best;                                 //POUR SAUVEGARDER
-	score.close();                            //LES MEILLEURS SCORES
+	putColorImage(IntPoint2(0, 0), fond, width2, height2);//affichage du fond 
 
 	Bouton bouton_start("bouton_start.jpg", "bouton_start_clic.jpg",width2 / 5-20, height2 / 3);			    	//DEFINITION
 	Bouton bouton_rejouer("bouton_rejouer.jpg", "bouton_rejouer_clic.jpg", width2 / 5 - 20, height2 / 5+50);       //DES BOUTONS
@@ -86,9 +78,9 @@ int main()
 	}
     but=false;
     
-    putColorImage(IntPoint2(-1, -1), fond, width2, height2);        //affichage du fond 
-    Piaf p(x0, height/2, 0, m, perso);                              //
-    p.afficher();                                                   //affichage de l'oiseau
+    putColorImage(IntPoint2(0,0), fond, width2, height2);          //affichage du fond 
+    Piaf p(x0, height/2, m, perso);                                //
+    p.afficher();                                                  //affichage de l'oiseau
     
 	t.reset(); //On lance le chrono
 
@@ -122,7 +114,7 @@ int main()
 				if (u == 0){
 					piece.existence(true);
 					u = double(rand()) / RAND_MAX;
-					piece.setxy(obs[n-1].getx()+300, 30 + (height - 150)*u);
+					piece.setxy(obs[n-1].getx()+300, 30 + (height - 200)*u);
 				}
 			}
 			//////////////
@@ -150,8 +142,8 @@ int main()
 				piece.afficher();
 			}
 
-			p.bouger();  //MOUVEMENT
-			p.afficher();//OISEAU
+			p.bouger();   //MOUVEMENT
+			p.afficher(); //OISEAU
 
 			if (!obs[0].cadre()) //si l'obstacle sort de la fenêtre, on le sort de la liste et on décale tout
 			{
@@ -186,9 +178,9 @@ int main()
 			/////DETECTION COLLISIONS
 			c = !((p.gety() > 0) && (p.gety() < height2 - p.geth())); //vrai si l'oiseau est hors cadre 
 
-			b = obs[0].test(p); //Un seul obstacle dans l'écran (dans le format actuel)
+			b = obs[0].test(&p); //Un seul obstacle dans l'écran (dans le format actuel)
 
-			if (piece.test(p) && piece.existe())
+			if (piece.test(&p) && piece.existe())
 			{ //si on passe sur une pièce, on la fait disparaître, et on donne un point au joueur
 				piece.existence(false);
 				compteur++;

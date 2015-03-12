@@ -7,10 +7,9 @@ using namespace Imagine;
 #include "Fonctions.h"
  
 
-Piece::Piece(int X, int Y, int TYPE){
+Piece::Piece(int X, int Y){
 	x = X;
 	y = Y;
-	type = TYPE;
 	loadColorImage(srcPath("Piece.jpg"), I, w, h);
 	b = false;
 }
@@ -27,10 +26,10 @@ void Piece::bouger(int vx){
 	x += vx*dt;
 }
 
-bool Piece::test(Piaf p){
-	int W = p.getw();
-	int H = p.geth();
-	IntPoint2 p_centre(p.getx() + W / 2, p.gety() + H / 2);
+bool Piece::test(Piaf* p){
+	int W = (*p).getw();
+	int H = (*p).geth();
+	IntPoint2 p_centre((*p).getx() + W / 2, (*p).gety() + H / 2);
 	return((p_centre.x()>x-5) && (p_centre.x()<x+w+5) && (p_centre.y()>y-5) && (p_centre.y()<y+h+5));
 }
 

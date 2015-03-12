@@ -47,7 +47,7 @@ void Piaf::bouger(){
 		pos = 6;
 }
 
-Piaf::Piaf(double X, double Y, double vX, double M, int perso){
+Piaf::Piaf(double X, double Y, double M, int perso){
 	setpos(X, Y);
     setv(0);
     if(perso==0){

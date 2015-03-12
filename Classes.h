@@ -5,7 +5,7 @@ const double dt = 0.05; //pas temporel
 const double g = 98*dt;//pesanteur
 const double vo = -500*dt; //vitesse obstacle;
 const double lim = 140;//vitesse limite de l'oiseau
-const int N = 10;
+const int N = 3;
 const int width = 600, height = 800;
 
 class Piaf{
@@ -24,10 +24,11 @@ class Piaf{
 	int pos;//repère pour savoir quelle image afficher parmi les 7
     int perso; // choix du personnage
 
-public:
 	void setpos(int X, int Y);
 	void setv(double vY);
-	Piaf(double x,double y,double vx, double m, int perso);
+public:
+	
+	Piaf(double x,double y, double m, int perso);
 	int getw();
 	int geth();
 	double getx();
@@ -50,7 +51,7 @@ public:
 	Obstacle();
 	void afficher();
 	void bouger(double vx);
-	bool test(Piaf p);
+	bool test(Piaf* p);
 	void setx(double X);
 	void sety(double Y);
 	void seth(double H);
@@ -60,36 +61,29 @@ public:
 };
 
 class Bouton{
-	int x, y, w, h,t;
-	Color c1, c2;
-	std::string s1, s2; //chemins images, si images à afficher, ou texte.
-	Color* I1;//si image à afficher
+	int x, y, w, h;
+	std::string s1, s2; //chemins images
+	Color* I1;
 	Color* I2;
-	bool b; //indique si bouton image ou texte vrai si image, faux si texte
 public:
-	Bouton(std::string s, int x, int y, int w, int h, Color c1, Color c2, int t); //Constructeur si Bouton texte
-	Bouton(std::string s1, std::string s2, int x, int y);  //Constructeur si Bouton image (deuxième image utile pour effet "clic")
+	Bouton( std::string s1,  std::string s2, int x, int y);  //ructeur si Bouton image (deuxième image utile pour effet "clic")
 	~Bouton();
 	void afficher();
-	void text();
-	void setw(int W);
-	void setText(std::string S);
 	void clic();
-	bool test();
-	bool test(int X, int Y);
+	bool test(int X,  int Y);
 	void setImage(std::string S1, std::string S2);
 };
 
 class Piece{
-	int x, y, w, h, type;
+	int x, y, w, h;
 	bool b;
 	Color* I;
 public:
-	Piece(int x, int y, int type);
+	Piece(int x, int y);
 	~Piece();
 	void bouger(int vx);
 	void afficher();
-	bool test(Piaf p);
+	bool test(Piaf* p);
 	void setxy(int X, int Y);
 	bool cadre();
 	bool existe();
