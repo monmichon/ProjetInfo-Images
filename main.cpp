@@ -9,7 +9,7 @@ using namespace std;
 
 
 int m = 35, x0 = width / 3;
-const double  r = 13, jump = 190*m*dt, pas_vitesse =dt;
+const double jump = 190*m*dt, pas_vitesse =dt;
 int vx = 1400 * dt; //vitesse de défilement des tuyaux
 int width2 = width, height2 = height; //width et height sont des const définis dans Classes.h, et on a besoin de leurs équivalents en int pour les utiliser dans loadColorImage
 int n = 0; //n est le nombre d'obstacles créés
@@ -33,7 +33,7 @@ int main()
 	loadColorImage(srcPath("fond.jpg"), fond, width2, height2);          //FOND ET
 	Window W1 = openWindow(width2, height2, "FlaPonts Bird");  //OUVERTURE FENETRE
 
-	
+
 	putColorImage(IntPoint2(0, 0), fond, width2, height2);//affichage du fond 
 
 	Bouton bouton_start("bouton_start.jpg", "bouton_start_clic.jpg",width2 / 5-20, height2 / 3);			    	//DEFINITION
@@ -45,6 +45,7 @@ int main()
     Bouton bouton_thibaud("t.jpg","t_clic.jpg",width2 /2-10-step,h_bouton);
 	Bouton bouton_fond("fond_bouton.jpg","fond_bouton.jpg",width2/5-20,h_bouton-17);
     
+
 	bouton_start.afficher();
 	bouton_fond.afficher();
     bouton_flappy.afficher();
@@ -117,7 +118,6 @@ int main()
 					piece.setxy(obs[n-1].getx()+300, 30 + (height - 200)*u);
 				}
 			}
-			//////////////
 
 
 			noRefreshBegin();////////////////////////////////////////////////////// PARTIE AFFICHAGE
