@@ -9,7 +9,8 @@ using namespace std;
 
 
 int m = 35, x0 = width / 3;
-const double  r = 13, jump = 190*m*dt, pas_vitesse =dt;
+int best;
+const double jump = 190*m*dt, pas_vitesse =dt;
 int vx = 1400 * dt; //vitesse de défilement des tuyaux
 int width2 = width, height2 = height; //width et height sont des const définis dans Classes.h, et on a besoin de leurs équivalents en int pour les utiliser dans loadColorImage
 int n = 0; //n est le nombre d'obstacles créés
@@ -35,14 +36,6 @@ int main()
 	
 	putColorImage(IntPoint2(-1, -1), fond, width2, height2);//affichage du fond  //AFFICHAGE DE L'ECRAN
     
-    
-    
-    
-    
-
-	ifstream score(srcPath("savegame.txt"));  //ON OUVRE UN FICHIER
-	int best;                                 //POUR SAUVEGARDER
-	score.close();                            //LES MEILLEURS SCORES
 
 	Bouton bouton_start("bouton_start.jpg", "bouton_start_clic.jpg",width2 / 5-20, height2 / 3);			    	//DEFINITION
 	Bouton bouton_rejouer("bouton_rejouer.jpg", "bouton_rejouer_clic.jpg", width2 / 5 - 20, height2 / 5+50);       //DES BOUTONS
@@ -51,9 +44,9 @@ int main()
     Bouton bouton_mathias("m.jpg","m_clic.jpg",width2 / 2+180, height2 / 3);
     Bouton bouton_thibaud("t.jpg","t_clic.jpg",width2 / 2-180, height2 / 3);
     
-    drawString(width2/2-180,height2/3-100,"choisissez",YELLOW,50);
-    drawString(width2/2-180,height2/3-10,"votre",YELLOW,50);
-    drawString(width2/2-180,height2/3+30,"personnage",YELLOW,50);
+    drawString(10,height2/4,"choisissez",YELLOW,50);
+    drawString(width2/2-40,height2/4,"votre",YELLOW,50);
+    drawString(width2/2+30,height2/4,"perso",YELLOW,50);
     bouton_flappy.afficher();
     bouton_mathias.afficher();
     bouton_thibaud.afficher();
@@ -127,7 +120,6 @@ int main()
 					piece.setxy(obs[n-1].getx()+300, 30 + (height - 150)*u);
 				}
 			}
-			//////////////
 
 
 			noRefreshBegin();////////////////////////////////////////////////////// PARTIE AFFICHAGE
